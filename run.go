@@ -70,7 +70,11 @@ func newApp(version string, stdin io.Reader, stdout io.Writer, fs afero.Fs) *cli
 		ExitErrHandler: func(context.Context, *cli.Command, error) {},
 		Flags: []cli.Flag{
 			&cli.IntFlag{Name: flagCount, Aliases: []string{"n"}, Usage: "output at most COUNT lines"},
-			&cli.StringFlag{Name: flagRange, Aliases: []string{"i"}, Usage: "treat each number LO through HI as an input line"},
+			&cli.StringFlag{
+				Name:    flagRange,
+				Aliases: []string{"i"},
+				Usage:   "treat each number LO through HI as an input line",
+			},
 			&cli.BoolFlag{Name: flagEcho, Aliases: []string{"e"}, Usage: "treat each ARG as an input line"},
 			&cli.Int64Flag{Name: flagSeed, Usage: "seed the shuffle for deterministic output"},
 		},
