@@ -12,16 +12,16 @@ import (
 
 func TestRun(t *testing.T) {
 	cases := []struct {
+		files      map[string]string
 		name       string
 		version    string
-		args       []string
 		stdin      string
-		files      map[string]string
-		wantLines  []string // expected output lines, order-independent (sorted before compare)
-		wantCount  int      // expected number of output lines
-		wantOut    string   // exact expected stdout (used for the version flag)
-		wantCode   int
+		wantOut    string
 		wantErrSub string
+		args       []string
+		wantLines  []string
+		wantCount  int
+		wantCode   int
 	}{
 		{
 			name:      "stdin permutation seeded",
