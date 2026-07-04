@@ -1,25 +1,9 @@
-# yup-shuf
+[![actions](https://github.com/yupsh/yup-shuf/actions/workflows/actions.yml/badge.svg)](https://github.com/yupsh/yup-shuf/actions/workflows/actions.yml)
+[![ci](https://github.com/yupsh/yup-shuf/actions/workflows/ci.yml/badge.svg)](https://github.com/yupsh/yup-shuf/actions/workflows/ci.yml)
+[![dockerfiles](https://github.com/yupsh/yup-shuf/actions/workflows/dockerfiles.yml/badge.svg)](https://github.com/yupsh/yup-shuf/actions/workflows/dockerfiles.yml)
+[![docs](https://github.com/yupsh/yup-shuf/actions/workflows/docs.yml/badge.svg)](https://github.com/yupsh/yup-shuf/actions/workflows/docs.yml)
+[![go](https://github.com/yupsh/yup-shuf/actions/workflows/go.yml/badge.svg)](https://github.com/yupsh/yup-shuf/actions/workflows/go.yml)
+[![release](https://github.com/yupsh/yup-shuf/actions/workflows/release.yml/badge.svg)](https://github.com/yupsh/yup-shuf/actions/workflows/release.yml)
+[![shell](https://github.com/yupsh/yup-shuf/actions/workflows/shell.yml/badge.svg)](https://github.com/yupsh/yup-shuf/actions/workflows/shell.yml)
 
-```
-NAME:
-   shuf - generate random permutations
-
-USAGE:
-   shuf [OPTIONS] [FILE]
-   shuf -e [OPTIONS] [ARG...]
-   shuf -i LO-HI [OPTIONS]
-
-   Write a random permutation of the input lines to standard output.
-   With no FILE, or when FILE is -, read standard input.
-
-VERSION:
-   dev
-
-GLOBAL OPTIONS:
-   --head-count int, -n int         output at most COUNT lines (default: 0)
-   --input-range string, -i string  treat each number LO through HI as an input line
-   --echo, -e                       treat each ARG as an input line
-   --seed int                       seed the shuffle for deterministic output (default: 0)
-   --help, -h                       show help
-   --version                        print version information and exit
-```
+[docs](https://yupsh.github.io/docs.repl/)
