@@ -55,14 +55,32 @@ var spec = clix.Spec{
 // leak between test invocations).
 func flags() []urf.Flag {
 	return []urf.Flag{
-		&urf.IntFlag{Name: flagCount, Aliases: []string{"n"}, Usage: "output at most COUNT lines"},
+		&urf.IntFlag{
+			Name:    flagCount,
+			Aliases: []string{"n"},
+			Usage:   "output at most COUNT lines",
+			Sources: urf.EnvVars("YUP_SHUF_HEAD_COUNT"),
+			Value:   0,
+		},
 		&urf.StringFlag{
 			Name:    flagRange,
 			Aliases: []string{"i"},
 			Usage:   "treat each number LO through HI as an input line",
+			Sources: urf.EnvVars("YUP_SHUF_INPUT_RANGE"),
+			Value:   "",
 		},
-		&urf.BoolFlag{Name: flagEcho, Aliases: []string{"e"}, Usage: "treat each ARG as an input line"},
-		&urf.Int64Flag{Name: flagSeed, Usage: "seed the shuffle for deterministic output"},
+		&urf.BoolFlag{
+			Name:    flagEcho,
+			Aliases: []string{"e"},
+			Usage:   "treat each ARG as an input line",
+			Sources: urf.EnvVars("YUP_SHUF_ECHO"),
+		},
+		&urf.Int64Flag{
+			Name:    flagSeed,
+			Usage:   "seed the shuffle for deterministic output",
+			Sources: urf.EnvVars("YUP_SHUF_SEED"),
+			Value:   0,
+		},
 	}
 }
 
