@@ -5,7 +5,7 @@ go 1.26.4
 require (
 	github.com/gloo-foo/cmd-shuf v0.1.21
 	github.com/spf13/afero v1.15.0
-	github.com/urfave/cli/v3 v3.11.0
+	github.com/urfave/cli/v3 v3.12.0
 )
 
 require (
